@@ -1,0 +1,112 @@
+body,html {
+    font-size: 12px;
+    line-height: 1.2;
+    background-color: white;
+    height: 100%;
+}
+
+main{
+    width: 100%;
+    height: calc(100vh - 50px); 
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch       /*ios增加弹性*/
+}
+
+
+main>section:first-child {
+    display: block
+}
+
+main>section {
+    display: none;
+}
+
+section .item {
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding: 10px 0 10px 10px;
+}
+
+.item img {
+    width:70px;
+}
+
+.cover{
+    float: left;
+}
+
+.detail {
+    float: left;
+    margin-left: 12px;
+}
+
+.score{
+    color: red
+}
+
+.score::after {
+    content: '分';
+    color: 'red'
+}
+
+.collect_count::after{
+    content: "收藏"
+}
+
+
+.loading{
+    text-align: center;
+}
+
+.loading .iconfont {
+    display: inline-block;
+    animation: 1s rotate linear infinite
+}
+
+
+
+@keyframes rotate {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+#search .header{
+    padding: 5px 10px;
+    display: flex;
+}
+
+#search .header input{
+    flex:1;
+}
+
+#search .header .search {
+    height: 30px;
+    width: 50px;
+    margin-left:10px;
+}
+
+
+footer{
+   border-top: 1px solid #ccc;
+   position: absolute;
+   bottom: 0px;
+   height: 50px;
+   width: 100%;
+   display: flex
+}
+
+footer>div{
+    flex:1;
+    text-align: center
+}
+
+footer>div>span{
+    display: block;
+    padding-top: 3px;
+}
+
+footer>.active {
+    color:#FF5722
+}
+
+
